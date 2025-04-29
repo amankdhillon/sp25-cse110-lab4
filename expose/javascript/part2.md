@@ -29,7 +29,7 @@ At line 12, where console.log(i) is called, I get an error: ReferenceError: i is
 
 The reason for this is that the variable i is defined inside the for loop with let. In JS, when we use let inside a block, the variable i is scoped to that block, meaning it is only accessible within the loop. Once the loop finishes, i is no longer available outside of it.
 
-When the code reaches console.log(i) after the loop, it tries to access i, but i is not in scope anymore, so you get the ReferenceError.
+When the code reaches console.log(i) after the loop, it tries to access i, but i is not in scope anymore, so we get the ReferenceError.
 
 6:
 At line 13, where console.log(discountedPrice) is called, I get an error: ReferenceError: discountedPrice is not defined.
@@ -44,4 +44,15 @@ At line 14, where console.log(finalPrice) is called, I get the output: 150
 This works because the finalPrice variable is declared outside the loop using let, which gives it a scope that persists across all iterations of the loop. Unlike discountedPrice, which is scoped only within the loop block, finalPrice retains its value from the last iteration. After the loop finishes, finalPrice contains the discounted price of the last item in the array, which is 150 in this case. This is why console.log(finalPrice) prints 150.
 
 8:
+The function, as written, will not produce any output because there is no call to console.log() or anything that triggers the result to be printed. The function is correctly calculating the discounted prices and returning them, but unless the result is logged or explicitly returned in a way that gets printed, it will just run without showing anything.
 
+9:
+At line 11, where console.log(i) is called, I get an error: ReferenceError: i is not defined.
+
+The reason for this is that the variable i is declared inside the for loop using let. In JS, variables declared with let have block scope, meaning they are only accessible within the block in which they are defined. Since i is defined inside the for loop, it is not accessible outside of the loop.
+
+10:
+At line 12, console.log(length) will successfully print 3, because the length variable holds the value of the prices array's length, which is 3 in this case.
+
+11:
+The function, as written, will not produce any output because there is no call to console.log() or anything that triggers the result to be printed. The function is correctly calculating the discounted prices and returning them, but unless the result is logged or explicitly returned in a way that gets printed, it will just run without showing anything.
