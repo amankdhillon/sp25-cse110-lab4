@@ -146,5 +146,18 @@ Explanation: Boolean(2) is true, and both sides are the same type.
 17:
 When we call `modifyArray([1, 2, 3], doSomething)`, we are passing an array and a callback function into modifyArray. The function then loops through each element of the array and applies the callback function to it. In this case, the callback doSomething simply multiplies each number by two. So, 1 becomes 2, 2 becomes 4, and 3 becomes 6. These new values are pushed into a new array, and once the loop is finished, the function returns `[2, 4, 6]`. At first, when I ran the code, I did not see any output in the terminal. That is because even though modifyArray returns a new array, I never actually logged the result to the console. After adding a console.log around the function call, I was able to see the output `[2, 4, 6]` displayed properly.
 
+18: in diff file
+It works because:
+printTime is a function that gets the current time and logs it.
+setInterval(printTime, 1000) calls printTime every 1000 milliseconds (which is every 1 second).
+
+19:
+When the function printNums() is called, it prints 1 immediately. Then, it schedules two setTimeout calls. The first setTimeout schedules the printing of 2 after 1000 milliseconds (1 second), and the second one schedules the printing of 3 after 0 milliseconds. After both timeouts are set up, it immediately prints 4. Even though 3 is scheduled with a delay of 0 milliseconds, it still gets placed in the event queue and runs after the main execution stack is cleared. This means that the main thread finishes printing 1 and 4 first, then the 0-delay timeout logs 3, and finally, after 1 full second, it logs 2. That’s why the output is:
+```
+amandhillon@MacBook-Pro Lab4_Starter % node scripts/lab4-part2.js
+1
+4
+3
+2
 
 
