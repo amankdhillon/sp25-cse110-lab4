@@ -9,7 +9,7 @@ final result: 20
 This is because after adding the numbers, the result variable now holds the value 20, and the code logs it right after.
 
 3:
-You should avoid using var because it has strange behavior with something called hoisting. Variables declared with var are lifted to the top of their scope, which can lead to bugs where variables seem to exist before you define them. var is also function-scoped, not block-scoped, so if you define it inside an if block or loop, it still behaves like it was declared at the top of the function. Using let or const instead makes it easier to manage where variables actually live and change.
+We should avoid using var because it has strange behavior with something called hoisting. Variables declared with var are lifted to the top of their scope, which can lead to bugs where variables seem to exist before we define them. var is also function-scoped, not block-scoped, so if we define it inside an if block or loop, it still behaves like it was declared at the top of the function. Using let or const instead makes it easier to manage where variables actually live and change.
 
 4: 
 At line 9, if add is true, it prints:
