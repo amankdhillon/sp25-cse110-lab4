@@ -41,6 +41,7 @@ TypeError: Assignment to constant variable.
 Node.js v22.15.0
 
 Nothing is printed by line 9 because the code throws an error before it can get there. The line result = num1 + num2 tries to change the value of a variable that was declared using const, which is not allowed. Since const means the variable can’t be reassigned, the program stops and throws an error before it can reach that console log.
+
 7:
 Nothing is printed at line 13  because the error from line 9 causes the function to exit early. Since the program crashes when trying to reassign a constant variable, it never makes it to line 13.
 
