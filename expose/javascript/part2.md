@@ -151,13 +151,18 @@ It works because:
 printTime is a function that gets the current time and logs it.
 setInterval(printTime, 1000) calls printTime every 1000 milliseconds (which is every 1 second).
 
-19:the output is:
-```
-amandhillon@MacBook-Pro Lab4_Starter % node scripts/lab4-part2.js
-1
-4
-3
-2
+19:
+the output is:
+
+  amandhillon@MacBook-Pro Lab4_Starter % node scripts/lab4-part2.js
+  
+  1
+  
+  4
+  
+  3
+  
+  2
 
 The function starts by printing 1 right away. Then it sets a timer to print 2 after 1000 milliseconds (1 second) and another one to print 3 after 0 milliseconds. Even though 3 is set with a delay of 0, it doesn’t run immediately—it gets placed in a queue to run after the current code finishes. So the next line, console.log(4), runs right away. After that, the program goes back and runs the 0-delay timeout, which prints 3, and finally, after one full second, it prints 2. That’s why the final output ends up in the order: 1, 4, 3, 2.
 
