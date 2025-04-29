@@ -138,8 +138,13 @@ Explanation: Boolean(2) is true, and both sides are the same type.
 
 
 15: Difference between == and ===
-
 == checks if values are equal but lets JavaScript convert the types if they are different.  
 === checks if the values and the types are both exactly the same with no conversions.
+
+16: in a different file
+
+17:
+When we call `modifyArray([1, 2, 3], doSomething)`, we are passing an array and a callback function into modifyArray. The function then loops through each element of the array and applies the callback function to it. In this case, the callback doSomething simply multiplies each number by two. So, 1 becomes 2, 2 becomes 4, and 3 becomes 6. These new values are pushed into a new array, and once the loop is finished, the function returns `[2, 4, 6]`. At first, when I ran the code, I did not see any output in the terminal. That is because even though modifyArray returns a new array, I never actually logged the result to the console. After adding a console.log around the function call, I was able to see the output `[2, 4, 6]` displayed properly.
+
 
 
