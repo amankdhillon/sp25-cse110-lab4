@@ -56,3 +56,90 @@ At line 12, console.log(length) will successfully print 3, because the length va
 
 11:
 The function, as written, will not produce any output because there is no call to console.log() or anything that triggers the result to be printed. The function is correctly calculating the discounted prices and returning them, but unless the result is logged or explicitly returned in a way that gets printed, it will just run without showing anything
+
+12: 
+A, Accessing the value of the name property in the student object:
+`student.name;`
+
+B, Accessing the value of the Grad Year property in the student object:
+`student['Grad Year'];`
+
+
+C, Calling the function for the greeting property in the student object:
+`student.greeting();`
+
+D, Accessing the name property of the object in the Favorite Teacher property in student:
+`student['Favorite Teacher'].name;`
+
+E, Access index zero in the array of the courseLoad property of the student object:
+`student.courseLoad[0];`
+
+
+13: Arithmetic
+
+a. '3' + 2  
+Output: '32'  
+Explanation: The number 2 is turned into a string and added to '3' as text.
+
+b. '3' - 2  
+Output: 1  
+Explanation: The string '3' is converted to a number for subtraction.
+
+c. 3 + null  
+Output: 3  
+Explanation: null becomes 0, so it is just 3 + 0.
+
+d. '3' + null  
+Output: '3null'  
+Explanation: null is turned into a string and added to '3'.
+
+e. true + 3  
+Output: 4  
+Explanation: true is treated like 1, so 1 + 3.
+
+f. false + null  
+Output: 0  
+Explanation: false is 0, null is 0, so 0 + 0.
+
+g. '3' + undefined  
+Output: '3undefined'  
+Explanation: undefined becomes a string and gets added as text.
+
+h. '3' - undefined  
+Output: NaN  
+Explanation: You cannot subtract undefined, so it gives "Not a Number".
+
+
+14: Comparison
+
+a. '2' > 1  
+Output: true  
+Explanation: '2' turns into 2 for the comparison.
+
+b. '2' < '12'  
+Output: false  
+Explanation: These are strings, so it checks alphabetically. '2' comes after '1'.
+
+c. 2 == '2'  
+Output: true  
+Explanation: == allows type conversion so it matches.
+
+d. 2 === '2'  
+Output: false  
+Explanation: === checks both value and type. One is a number and one is a string.
+
+e. true == 2  
+Output: false  
+Explanation: true becomes 1, which is not equal to 2.
+
+f. true === Boolean(2)  
+Output: true  
+Explanation: Boolean(2) is true, and both sides are the same type.
+
+
+15: Difference between == and ===
+
+== checks if values are equal but lets JavaScript convert the types if they are different.  
+=== checks if the values and the types are both exactly the same with no conversions.
+
+
