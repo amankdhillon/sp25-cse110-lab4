@@ -55,4 +55,4 @@ The reason for this is that the variable i is declared inside the for loop using
 At line 12, console.log(length) will successfully print 3, because the length variable holds the value of the prices array's length, which is 3 in this case.
 
 11:
-The function, as written, will not produce any output because there is no call to console.log() or anything that triggers the result to be printed. The function is correctly calculating the discounted prices and returning them, but unless the result is logged or explicitly returned in a way that gets printed, it will just run without showing anything.
+
